@@ -1,4 +1,6 @@
 # Introduction theme for Hugo
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/51d09485-c9d1-4a88-90ba-894f09e5a29d/deploy-status)](https://app.netlify.com/sites/hugo-introduction/deploys)
 [![Build Status](https://travis-ci.com/victoriadrake/hugo-theme-introduction.svg?branch=master)](https://travis-ci.com/victoriadrake/hugo-theme-introduction)
 ![Latest Release](https://img.shields.io/github/tag/victoriadrake/hugo-theme-introduction.svg)
 
@@ -179,6 +181,6 @@ This theme would not be nearly as awesome without its amazing community of open 
 Pull requests for bug fixes and improvements are welcome.
 
 # License
-Copyright (C) 2018 [Victoria Drake](https://victoria.dev/)
+Copyright (C) 2017-2019 [Victoria Drake](https://victoria.dev/)
 
 Licensed under [Apache-2.0](https://github.com/victoriadrake/hugo-theme-introduction/blob/master/LICENSE)
