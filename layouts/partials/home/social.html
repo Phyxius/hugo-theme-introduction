@@ -1,4 +1,4 @@
-<div class="social-icons">
+<div class="social-icons has-text-centered">
     {{ range .Site.Params.social }}
     <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
         <i class="{{ .icon_pack}} fa-{{ .icon}}"></i>
