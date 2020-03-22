@@ -2,6 +2,27 @@
 $fa-font-path: '{{ "/fonts/fontawesome-free/webfonts" }}'
 $nunito-font-path: '{{ "/fonts/NunitoSans" }}'
 
+{{ if eq $themeStyle "auto" }}
+@import "fonts"
+@import "light-variables"
+@import "base-variables"
+@import "bulma-import"
+@import "fontawesome-import"
+@import "base"
+@import "light-style"
+@import "light-code"
+
+@media (prefers-color-scheme: dark)
+    @import "fonts"
+    @import "dark-variables"
+    @import "base-variables"
+    @import "bulma-import"
+    @import "fontawesome-import"
+    @import "base"
+    @import "dark-style"
+    @import "dark-code"
+
+{{ else }}
 @import "fonts"
 @import "{{ $themeStyle }}-variables"
 @import "base-variables"
@@ -10,3 +31,4 @@ $nunito-font-path: '{{ "/fonts/NunitoSans" }}'
 @import "base"
 @import "{{ $themeStyle }}-style"
 @import "{{ $themeStyle }}-code"
+{{ end }}
