@@ -1,0 +1,3 @@
+{{ $darkModeToggle := resources.Get "js/dark-mode-toggle/src/dark-mode-toggle.mjs" }}
+{{ $jsBundle := slice $darkModeToggle | resources.Concat "js/darkModeToggle.mjs" | resources.Minify | resources.Fingerprint }}
+<script type="module" src="{{ $jsBundle.Permalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>

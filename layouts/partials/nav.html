@@ -107,6 +107,9 @@
             {{ if and .Site.Params.showRSSButton .Site.RSSLink }}
             <a class="navbar-item" href="{{ .Site.RSSLink }}"><i class="fas fa-rss"></i></a>
             {{ end }}
+            
+            {{ partial "dark-mode-toggle.html" }}
+
             {{ end }}
         </div>
     </nav>
