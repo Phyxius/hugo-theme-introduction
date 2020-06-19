@@ -102,7 +102,7 @@
         {{ with .Resources.GetMatch "contact.md" }}
         <div class="section" id="{{ .File.TranslationBaseName }}">
             <div class="container">
-                <h2 class="title is-2">{{ .Title | markdownify }}</h2>
+                <h2 class="title has-text-centered is-2">{{ .Title | markdownify }}</h2>
                 <div class="markdown">
                     {{ .Content }}
                 </div>
