@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 <title>
-{{ if .Params.humanize | default true }}
+{{ if .Params.humanize | default (.Site.Params.Humanize | default true) }}
 {{ .Title | humanize | title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title | markdownify }}{{ end }}
 {{ else }}
 {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title | markdownify }}{{ end }}
