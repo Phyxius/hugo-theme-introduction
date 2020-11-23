@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 {{ $themeStyle := replace (.Site.Params.themeStyle | default "light") "auto" "light" }}
 $fa-font-path: '{{ print $.Site.BaseURL "fonts/fontawesome-free/webfonts" }}'
 $nunito-font-path: '{{ print $.Site.BaseURL "fonts/NunitoSans" }}'
+=======
+{{ $themeStyle := .Site.Params.themeStyle | default "light" }}
+$fa-font-path:     '{{ urls.Parse "/fonts/fontawesome-free/webfonts" }}'
+$nunito-font-path: '{{ urls.Parse "/fonts/NunitoSans" }}'
+>>>>>>> 32d46f19f436c02c83d1c81439fcad2901f0f038
 
 @import "fonts"
 @import "{{ $themeStyle }}-variables"
