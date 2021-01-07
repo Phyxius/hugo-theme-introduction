@@ -1,7 +1,23 @@
-{{ $themeStyle := replace (.Site.Params.themeStyle | default "light") "auto" "light" }}
-$fa-font-path: '{{ print $.Site.BaseURL "fonts/fontawesome-free/webfonts" }}'
-$nunito-font-path: '{{ print $.Site.BaseURL "fonts/NunitoSans" }}'
+{{ $themeStyle := .Site.Params.themeStyle | default "light" }}
 
+{{ if eq $themeStyle "auto" }}
+@import "fonts"
+@import "light-variables"
+@import "base-variables"
+@import "bulma-import"
+@import "fontawesome-import"
+@import "base"
+@import "light-style"
+
+@media (prefers-color-scheme: dark)
+    @import "fonts"
+    @import "dark-variables"
+    @import "base-variables"
+    @import "fontawesome-import"
+    @import "base"
+    @import "dark-style"
+
+{{ else }}
 @import "fonts"
 @import "{{ $themeStyle }}-variables"
 @import "base-variables"
@@ -9,4 +25,4 @@ $nunito-font-path: '{{ print $.Site.BaseURL "fonts/NunitoSans" }}'
 @import "fontawesome-import"
 @import "base"
 @import "{{ $themeStyle }}-style"
-@import "{{ $themeStyle }}-code"
+{{ end }}
